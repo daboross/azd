@@ -4,23 +4,28 @@ function sendData() {
     request.send("HIIII");
 }
 function sendSuccess(data, textStatus, jqXHR) {
-    alert(textStatus);
-    alert(jqXHR);
+    var $value = $("#send-value");
+    $value.show()
+    $value.html("Success!")
 }
 function sendFail(data, textStatus, jqXHR) {
-    alert("Fail");
-    alert(textStatus);
-    alert(jqXHR);
+    var $value = $("#send-value");
+    $value.show()
+    $value.html("Failure: " + textStatus);
 }
 
 function sendData() {
     request = $.ajax({
         url: "http://dabo.guru/py/notify",
         type: "POST",
-        data: "Hello Test",
+        data: $("#send-form").val(),
         complete: sendSuccess,
         contentType: "text/plain;charset=UTF-8"
     });
     request.done(sendSuccess);
     request.fail(sendFail);
+    $("#send-form").hide();
+    $("#send-button").hide();
+    var sendValue = $("#send-value");
+    sendValue.show();
 }
