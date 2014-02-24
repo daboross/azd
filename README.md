@@ -1,4 +1,4 @@
 azd
 ===
 
-Source code for azd.daboross.net / dabo.guru
+Source code for [dabo.guru](http://dabo.guru)
