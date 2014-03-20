@@ -21,6 +21,17 @@
                     <br><br>
 
                     <h2 class="text-muted">It's a robot.</h2>
+
+                    <br><br>
+
+                    <div id="form">
+                        <textarea id="send-form" class="form-control" rows="3" placeholder="Suggest captions"></textarea>
+
+                        <div id="send-value" hidden=hidden>Sending...</div>
+                        <button id="send-button" type="submit" class="btn btn-default text-center" onclick="sendData();">
+                            Submit
+                        </button>
+                    </div>
                 </div>
                 <div class="col-md-5">
 
@@ -92,5 +103,6 @@
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/frc-new.js"></script>
+        <script src="js/send-form.js"></script>
     </body>
 </html>
