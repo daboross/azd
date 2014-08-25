@@ -12,7 +12,7 @@ function sendFail(data, textStatus, jqXHR) {
 function sendData() {
     var sendForm = $("#send-form");
     var request = $.ajax({
-        url: "http://dabo.guru/py/notify",
+        url: "http://dabo.guru/notify",
         type: "POST",
         data: sendForm.val(),
         complete: sendSuccess,
